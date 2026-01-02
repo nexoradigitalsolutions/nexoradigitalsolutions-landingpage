@@ -9,7 +9,6 @@ import Team from './components/Team'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ServiceDetail from './components/ServiceDetail'
-import Blogs from './components/Blogs'
 
 export default function App() {
   const [selectedService, setSelectedService] = useState<string | null>(null)
