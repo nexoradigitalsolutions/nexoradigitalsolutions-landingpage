@@ -66,7 +66,6 @@ const projects = [
 
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('all')
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 
   const categories = ['all', 'web', 'mobile', 'saas']
 
@@ -109,8 +108,6 @@ export default function Portfolio() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              onMouseEnter={() => setHoveredCard(project.id)}
-              onMouseLeave={() => setHoveredCard(null)}
               className="group relative bg-gradient-to-br from-slate-700 to-slate-900 rounded-2xl overflow-hidden border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:scale-105"
             >
               {/* Project Image Area */}
