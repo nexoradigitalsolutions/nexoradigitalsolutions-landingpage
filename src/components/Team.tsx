@@ -110,9 +110,14 @@ export default function Team() {
           <p className="text-gray-300 text-lg mb-6">
             Want to join our amazing team?
           </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 active:scale-95">
+          <a 
+            href="https://careers.com/nexoradigitalsolutions" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 active:scale-95"
+          >
             Join Us
-          </button>
+          </a>
         </div>
       </div>
     </section>

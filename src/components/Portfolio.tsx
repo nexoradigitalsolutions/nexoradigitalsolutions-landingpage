@@ -67,6 +67,11 @@ const projects = [
 export default function Portfolio() {
   const [selectedCategory, setSelectedCategory] = useState('all')
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    element?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const categories = ['all', 'web', 'mobile', 'saas']
 
   const filteredProjects = selectedCategory === 'all' 
@@ -162,8 +167,11 @@ export default function Portfolio() {
           <p className="text-gray-300 text-lg mb-6">
             Interested in working together?
           </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 active:scale-95">
-            Start Your Project
+          <button 
+           onClick={() => scrollToSection('contact')}
+            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-10 py-4 rounded-lg font-bold text-lg hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 active:scale-95">
+              
+              Start Your Project
           </button>
         </div>
       </div>

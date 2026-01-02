@@ -40,7 +40,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-xl text-gray-300 mb-8">
-              We create cutting-edge web and mobile applications that drive growth and engagement. From concept to launch, we deliver excellence.
+              We create cutting-edge web and mobile applications, blockchain solutions, and smart contracts that drive growth and engagement. From concept to launch, we deliver excellence across all digital platforms.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -64,7 +64,7 @@ export default function Hero() {
                 <div className="text-gray-400">Happy Clients</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-cyan-400">5+</div>
+                <div className="text-3xl font-bold text-cyan-400">10+</div>
                 <div className="text-gray-400">Years Experience</div>
               </div>
             </div>
