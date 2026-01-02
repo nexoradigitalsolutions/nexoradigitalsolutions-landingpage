@@ -6,17 +6,17 @@ const team = [
     name: 'Allan Brando Catayoc',
     role: 'Head of Technology',
     expertise: ['Full Stack Development', 'System Architecture', 'Cloud Solutions', 'Tech Leadership', 'Blockchain Development'],
-    image: '👨‍💻',
+    image: '/team/allan.png',
     email: 'allan@nexora.com',
     linkedin: 'https://www.linkedin.com/in/allanbrandocatayoc/',
-    github: '#',
+    github: 'https://github.com/chefallan',
   },
   {
     id: 2,
     name: 'Bryan Mejares',
     role: 'Head of Product Research',
     expertise: ['Product Strategy', 'Market Analysis', 'User Research', 'Data Analytics', 'Competitive Intelligence'],
-    image: '👨‍💼',
+    image: '/team/bryan.png',
     email: 'bryan@nexora.com',
     linkedin: 'https://www.linkedin.com/in/bryan-mejares-904187244/',
     github: '#',
@@ -26,7 +26,7 @@ const team = [
     name: 'Ryan Panuncia',
     role: 'Head of Marketing',
     expertise: ['Digital Marketing', 'Brand Strategy', 'Growth Marketing', 'Campaign Management', 'Content Creation'],
-    image: '👨‍🎓',
+    image: '/team/ryan.png',
     email: 'ryan@nexora.com',
     linkedin: 'https://www.linkedin.com/in/ryan-panuncia-8253b6260/',
     github: '#',
@@ -55,11 +55,24 @@ export default function Team() {
               className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:scale-105"
             >
               {/* Member Image Area */}
-              <div className="relative w-full h-56 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center overflow-hidden">
-                <div className="text-8xl group-hover:scale-110 transition-transform duration-300">
-                  {member.image}
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-70"></div>
+              <div className="relative w-full aspect-square bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center overflow-hidden">
+                {typeof member.image === 'string' && member.image.startsWith('/') ? (
+                  <div className="relative w-full h-full">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Professional overlay with subtle gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/40"></div>
+                    {/* Subtle vignette effect */}
+                    <div className="absolute inset-0 shadow-inner"></div>
+                  </div>
+                ) : (
+                  <div className="text-8xl group-hover:scale-110 transition-transform duration-300">
+                    {member.image}
+                  </div>
+                )}
               </div>
 
               {/* Content */}
