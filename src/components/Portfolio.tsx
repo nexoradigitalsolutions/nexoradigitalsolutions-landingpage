@@ -109,12 +109,16 @@ export default function Portfolio() {
 
                 {/* Links */}
                 <div className="flex gap-4">
-                  <button className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 active:scale-95">
+                  <button 
+                    onClick={() => window.open(project.link, '_blank')}
+                    className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 active:scale-95">
                     <ExternalLink size={18} />
                     <span className="hidden sm:inline">View Project</span>
                     <span className="sm:hidden">View</span>
                   </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 bg-slate-700 text-gray-300 py-3 rounded-lg font-semibold hover:bg-slate-600 hover:border-cyan-500 border border-slate-600 transition-all duration-300 hover:scale-105 active:scale-95">
+                  <button 
+                    onClick={() => window.open(project.github, '_blank')}
+                    className="flex-1 flex items-center justify-center gap-2 bg-slate-700 text-gray-300 py-3 rounded-lg font-semibold hover:bg-slate-600 hover:border-cyan-500 border border-slate-600 transition-all duration-300 hover:scale-105 active:scale-95">
                     <Github size={18} />
                     <span className="hidden sm:inline">Code</span>
                   </button>
