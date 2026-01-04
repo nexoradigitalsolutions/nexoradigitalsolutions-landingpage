@@ -17,7 +17,7 @@ const projects = [
     title: 'CV Hero',
     description: 'A modern, feature-rich CV/Resume builder application built with Next.js and TypeScript. Create, customize, and export professional resumes with AI-powered enhancements and a seamless user experience.',
     image: '/portfolio/images/cvhero.png',
-    category: 'web',
+    category: 'web, saas, mobile',
     tags: ['Nextjs', 'TypeScript', 'HTML', 'Tailwind CSS'],
     link: 'https://freecvhero.vercel.app',
     github: 'https://github.com/nexoradigitalsolutions/cvhero',
