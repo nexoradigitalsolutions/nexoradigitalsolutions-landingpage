@@ -4,63 +4,23 @@ import { useState } from 'react'
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with payment integration and inventory management',
-    image: '🛒',
+    title: 'BetterKananga Portal',
+    description: 'BetterKananga.org is a community-driven platform that makes Kananga government information and public services more accessible, transparent, and easy to navigate.',
+    image: '/portfolio/images/betterkananga.png',
     category: 'web',
-    tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    link: '#',
-    github: '#',
+    tags: ['Vue', 'TypeScript', 'HTML', 'Tailwind CSS'],
+    link: 'https://betterkananga.vercel.app/',
+    github: 'https://github.com/nexoradigitalsolutions/betterkananga',
   },
   {
     id: 2,
-    title: 'Social Media Dashboard',
-    description: 'Analytics dashboard for managing multiple social media accounts in one place',
-    image: '📊',
+    title: 'CV Hero',
+    description: 'A modern, feature-rich CV/Resume builder application built with Next.js and TypeScript. Create, customize, and export professional resumes with AI-powered enhancements and a seamless user experience.',
+    image: '/portfolio/images/cvhero.png',
     category: 'web',
-    tags: ['React', 'TypeScript', 'Firebase', 'Chart.js'],
-    link: '#',
-    github: '#',
-  },
-  {
-    id: 3,
-    title: 'Real Estate App',
-    description: 'Mobile app for browsing and managing real estate properties with AR preview',
-    image: '🏠',
-    category: 'mobile',
-    tags: ['React Native', 'Firebase', 'AR', 'Maps API'],
-    link: '#',
-    github: '#',
-  },
-  {
-    id: 4,
-    title: 'Fitness Tracking App',
-    description: 'Cross-platform fitness app with workout tracking and community features',
-    image: '💪',
-    category: 'mobile',
-    tags: ['Flutter', 'Firebase', 'Health Kit', 'Social'],
-    link: '#',
-    github: '#',
-  },
-  {
-    id: 5,
-    title: 'Learning Management System',
-    description: 'Comprehensive platform for online education with video streaming and assignments',
-    image: '📚',
-    category: 'web',
-    tags: ['Next.js', 'PostgreSQL', 'Stripe', 'Video.js'],
-    link: '#',
-    github: '#',
-  },
-  {
-    id: 6,
-    title: 'AI Content Generator',
-    description: 'SaaS platform leveraging AI to generate marketing content and copy',
-    image: '🤖',
-    category: 'saas',
-    tags: ['React', 'OpenAI API', 'Tailwind', 'PostgreSQL'],
-    link: '#',
-    github: '#',
+    tags: ['Nextjs', 'TypeScript', 'HTML', 'Tailwind CSS'],
+    link: 'https://freecvhero.vercel.app',
+    github: 'https://github.com/nexoradigitalsolutions/cvhero',
   },
 ]
 
@@ -117,9 +77,11 @@ export default function Portfolio() {
             >
               {/* Project Image Area */}
               <div className="relative w-full h-48 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center overflow-hidden">
-                <div className="text-6xl group-hover:scale-110 transition-transform duration-300">
-                  {project.image}
-                </div>
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
               </div>
 

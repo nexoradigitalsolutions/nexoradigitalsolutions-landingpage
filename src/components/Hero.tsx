@@ -8,6 +8,11 @@ export default function Hero() {
     setIsLoaded(true)
   }, [])
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    element?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <section
       id="home"
@@ -44,11 +49,11 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2">
+              <button onClick={() => scrollToSection('contact')} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all hover:scale-105 flex items-center justify-center gap-2">
                 Start Your Project
                 <ArrowRight size={20} />
               </button>
-              <button className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all">
+              <button onClick={() => scrollToSection('about')} className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all">
                 Learn More
               </button>
             </div>
